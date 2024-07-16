@@ -1,0 +1,25 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of userAdded">
+      <tr >
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phoneNumber }}</td>
+        <td>{{ user.address }}</td>
+        <td>
+          <button (click)="onEditUser(user.id)">Edit</button>
+          <button (click)="onDeleteUser(user)">Delete</button>
+          <button (click)="downloadPdf(user.id)">Download PDF</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
